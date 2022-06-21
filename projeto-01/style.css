@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+}
+
+
+main {
+    width: 592px;
+    margin: auto;
+    text-align: center;
+}
+
+h1 {
+    font-weight: normal;
+    margin: 20px 0;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #7D7987;
+    margin-bottom: 20px;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+li {
+    margin-right: 15px;
+}
+
+a, .yellow {
+    color: #FF9900;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    width: 592px;
+    margin: auto;
+    border-top: #ECEFF2 solid 1px;
+    margin-top: 60px;
+    padding-top: 10px;
+}

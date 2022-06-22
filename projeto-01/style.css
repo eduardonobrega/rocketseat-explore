@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
 * {
     margin: 0;
@@ -10,27 +10,33 @@
 }
 
 body {
-    min-height: 100vh;
-    font-family: 'Inter', sans-serif;
-}
 
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    text-align: center;
+}
 
 main {
     width: 592px;
     margin: auto;
-    text-align: center;
 }
 
 h1 {
+    font-size: 3em;
     font-weight: normal;
-    margin: 20px 0;
+    margin-top: 52px;
+    margin-bottom: 20px;
 }
 
 p {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
-    color: #7D7987;
-    margin-bottom: 20px;
+    color: #7d7987;
+    line-height: 28px;
+}
+
+p {
+    margin-bottom: 15px;
 }
 
 ul {
@@ -39,12 +45,12 @@ ul {
     justify-content: center;
 }
 
-li {
-    margin-right: 15px;
+li + li {
+    margin-left: 15px;
 }
 
 a, .yellow {
-    color: #FF9900;
+    color: #ff9900;
 }
 
 a {
@@ -58,7 +64,13 @@ a:hover {
 footer {
     width: 592px;
     margin: auto;
-    border-top: #ECEFF2 solid 1px;
-    margin-top: 60px;
-    padding-top: 10px;
+    border-top: 1px #eceff2 solid ;
+    margin-top: 40px;
+    padding: 10px 0;
+}
+
+#balls {
+    position: fixed;
+    bottom: 0;
+    right: 0;
 }

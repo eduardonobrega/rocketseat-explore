@@ -14,13 +14,19 @@
 
 body {
   min-height: 100vh;
-  padding: 0 120px;
+}
+
+div.container {
+  max-width: 1000px;
+  padding: 50px 20px 0 20px;
+  margin: auto;
+  background: linear-gradient(180deg, rgba(227, 255, 248, 0) 82.08%, rgba(227, 255, 248, 0.38) 100%);
 }
 
 header {
   display: flex;
   justify-content: space-between;
-  padding: 60px 0;
+  margin-bottom: 50px;
 }
 
 span#logo {
@@ -30,24 +36,26 @@ span#logo {
 header ul {
   list-style: none;
   display: flex;
+  gap: 48px;
 }
 
 header ul li {
   font-family: var(--mulish);
-  color: #1F1534;
-  margin-left: 48px;
-}
-
-li:first-child {
-  font-weight: 700;
 }
 
 a {
   text-decoration: none;
+  color: #1F1534;
+}
+
+ul a {
+  opacity: 0.5;
 }
 
 a:hover {
   text-decoration: underline;
+  font-weight: bold;
+  opacity: 1;
 }
 
 a:visited {
@@ -66,8 +74,9 @@ main div#text {
 
 h1 {
   font-family: var(--mulish);
-  font-weight: 400;
+  font-weight: normal;
   font-size: 3em;
+  color:  #1F1534;;
 }
 
 span {
@@ -80,6 +89,7 @@ p {
   color: #7D7987;
   font-size: 14px;
   margin: 40px 0;
+  line-height: 28px;
 }
 
 button {
@@ -90,6 +100,14 @@ button {
   padding: 17px 30px;
   border-radius: 4px;
   font-size: 16px;
+  display: flex;
+  gap: 10px;
+
+}
+
+button:hover {
+  cursor: pointer;
+  filter: brightness(1.1);
 }
 
 div#img {
@@ -102,7 +120,9 @@ div#img img {
 footer {
   text-align: center;
   font-family: var(--openSans);
-  margin-top: 20px;
+  margin-top: 40px;
+  font-size: 14px;
+  line-height: 28px;
 }
 
 #balls {
@@ -115,7 +135,7 @@ img#menu {
   display: none;
 }
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 600px){
   main {
     flex-direction: column;
     text-align: center;

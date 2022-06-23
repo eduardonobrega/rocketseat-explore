@@ -123,6 +123,19 @@ footer a:hover {
   text-decoration: underline;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #131313;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #00BFA6;
+  border-radius: 10px;
+}
+
 
 @media screen and (max-width: 685px){
   h1 {
@@ -151,5 +164,6 @@ footer a:hover {
   #menu {
     display: inline-block;
     width: 40px;
+    cursor: pointer;
   }
 }

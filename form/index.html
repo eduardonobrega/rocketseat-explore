@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crie seu Evento</title>
+  </head>
+  <body>
+
+    <header>
+      <h1>Crie e compartilhe seu evento.</h1>
+      <p>O primeiro passo, é preencher esse formulário de inscrição.</p>
+    </header>
+
+    <main>
+      <form action="get">
+        <div id="information">
+          <h2>Informações do Evento</h2>
+
+          <label for="title">Título do evento <span>(mínimo 8 caracteres)</span></label>
+          <input type="text" name="title" id="title">
+
+          <label for="link">Link do evento <span>(comece com https://)</span></label>
+          <input type="url" name="link" id="link" >
+
+          <label for="whats">Whatsapp para contato <span>(somente números)</span></label>
+          <input type="tel" name="whats" id="whats">
+
+          <label for="extras">Informações extras</label>
+          <textarea name="extras" id="extras" cols="30" rows="10"></textarea>
+
+          <label for="type">Categoria</label>
+          <select name="type" id="type">
+            <option value="t">deded</option>
+          </select>
+
+        </div>
+
+        <div id="privacy">
+          <h2>Privacidade</h2>
+
+          <label for="email-adm">E-mail do administrador <span>(digite um email válido)</span></label>
+          <input type="email" name="email-adm" id="email-adm">
+
+          <label for="password">Senha de acesso para os participantes <span>(mínimo 8 caracteres)</span></label>
+          <input type="password" name="password" id="password">
+
+        </div>
+
+        <div id="date">
+          <h2>Dia e hora</h2>
+        </div>
+      </form>
+    </main>
+
+  </body>
+</html>

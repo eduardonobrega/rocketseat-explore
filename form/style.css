@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+/*Google Fonts: Archivo and Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Poppins&display=swap');
+
+
+:root {
+  --archivo: 'Archivo', sans-serif;
+  --poppins: 'Poppins', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+
+}
+
+h1, legend {
+  font-family: var(--archivo);
+}
+
+body {
+  font-family: var(--poppins);
+  background-color: #E5E5E5;
+  min-height: 100vh;
+  padding-top: 77px;
+}
+
+body::before {
+  content: '';
+  height: 368px;
+  width: 100%;
+
+  background-color: black;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.page {
+  max-width: 319px;
+}
+
+header, main {
+  max-width: 736px;
+  margin: 0 auto;
+}
+
+header h1 {
+  color: white;
+  line-height: 42px;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+header p {
+  color: #42D3FF;
+  font-weight: 400px;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+main {
+  background-color: #FAFAFC;
+  margin-top: 42px;
+  padding: 64px;
+  border-radius: 8px 8px 0 0;
+}
+
+
+

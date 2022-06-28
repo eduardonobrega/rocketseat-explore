@@ -45,10 +45,26 @@
           <label for="password">Senha de acesso para os participantes <span>(mínimo 8 caracteres)</span></label>
           <input type="password" name="password" id="password">
 
+          <input type="checkbox" name="privacy-check" id="privacy-check">
+          <label for="privacy-check">Evento privado</label>
+
         </div>
 
-        <div id="date">
+        <div id="date-section">
           <h2>Dia e hora</h2>
+
+          <label for="date">Data</label>
+          <input type="date" name="date" id="date">
+
+          <label for="start">Das</label>
+          <input type="datetime" name="start" id="start" placeholder="19:00">
+
+          <label for="end"></label>
+          <input type="datetime" name="end" id="end" placeholder="20:00">
+        </div>
+
+        <div id="send">
+          <button>Salvar evento</button>
         </div>
       </form>
     </main>

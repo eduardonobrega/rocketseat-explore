@@ -14,7 +14,7 @@
   padding: 0;
   box-sizing: border-box;
   outline: none;
-
+  
 }
 
 h1, legend {
@@ -71,5 +71,30 @@ main {
   border-radius: 8px 8px 0 0;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+form fieldset {
+  border: none;
+}
+
+form legend {
+  font-weight: 600px;
+  font-size: 24px;
+  line-height: 34px;
+
+  color: #32264D;
+  border-bottom: 1px solid #E6E6F0;
+  width: 100%;
+  padding-bottom: 16px;
+}
+
+form label {
+  display: block;
+  margin-top: 24px;
+}
 
 

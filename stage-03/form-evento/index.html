@@ -15,7 +15,7 @@
     </header>
 
     <main>
-      <form action="index.html" method="get">
+      <form action="index.html" method="get" id="form">
         <!--Fieldset significa agrupamento de campos-->
         <fieldset id="information">
           <!--Legenda do campo-->
@@ -24,23 +24,23 @@
           <label for="title"
             >Título do evento <span>(mínimo 8 caracteres)</span></label
           >
-          <input type="text" name="title" id="title" />
+          <input type="text" id="title" minlength="8" />
 
           <label for="link"
             >Link do evento <span>(comece com https://)</span></label
           >
-          <input type="url" name="link" id="link" />
+          <input type="url" id="link" />
 
           <label for="whats"
             >Whatsapp para contato <span>(somente números)</span></label
           >
-          <input type="tel" name="whats" id="whats" />
+          <input type="tel" id="whats" required/>
 
           <label for="extras">Informações extras</label>
-          <textarea name="extras" id="extras"></textarea>
+          <textarea id="extras"></textarea>
 
           <label for="type">Categoria</label>
-          <select name="type" id="type">
+          <select id="type">
             <option value="" disabled selected>Tipo do evento</option>
             <option value="live">Ao vivo</option>
             <option value="podcast">Podcast</option>
@@ -55,23 +55,17 @@
             >E-mail do administrador
             <span>(digite um email válido)</span></label
           >
-          <input type="email" name="email-adm" id="email-adm" />
+          <input type="email" id="email-adm" />
 
           <label for="password"
             >Senha de acesso para os participantes
             <span>(mínimo 8 caracteres)</span></label
           >
-          <input type="password" name="password" id="password" />
+          <input type="password" id="password" />
 
           <div class="checkbox-wrapper">
-            <input
-            type="checkbox"
-            id="privacy-check"
-            
-            />
-            <label for="privacy-check" 
-              >Evento privado</label
-            >
+            <input type="checkbox" id="privacy-check" />
+            <label for="privacy-check">Evento privado</label>
           </div>
         </fieldset>
 
@@ -81,26 +75,24 @@
           <div class="date-wrapper">
             <div class="input-wrapper">
               <label for="date">Data</label>
-              <input type="date" name="date" id="date" />
+              <input type="date" id="date" />
             </div>
 
             <div class="input-wrapper">
               <label for="start">Das</label>
-              <input
-                type="datetime"
-                name="start"
-                id="start"
-                placeholder="19:00"
-              />
+              <input type="datetime" id="start" placeholder="19:00" />
             </div>
 
             <div class="input-wrapper">
               <label for="end">Até</label>
-              <input type="datetime" name="end" id="end" placeholder="20:00" />
+              <input type="datetime" id="end" placeholder="20:00" />
             </div>
           </div>
         </fieldset>
       </form>
     </main>
+    <footer>
+      <input type="submit" value="Salvar evento" form="form" />
+    </footer>
   </body>
 </html>

@@ -139,6 +139,7 @@ select:focus {
 
 form textarea {
   height: 168px;
+  resize: none;
 }
 
 form select {

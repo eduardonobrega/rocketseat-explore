@@ -1,0 +1,194 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Staatliches&display=swap');
+
+:root {
+  --staatliches: 'Staatliches', cursive;
+  --poppins: 'Poppins', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+legend,
+button {
+  font-family: var(--staatliches);
+}
+
+body,
+input {
+  font-family: var(--poppins);
+}
+
+body {
+  min-height: 100vh;
+  background-color: #e5e5e5;
+}
+
+body::before {
+  content: '';
+  background-color: #535971;
+
+  width: 100%;
+  height: 436px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.header-wrapper {
+  max-width: 400px;
+}
+header,
+main,
+footer {
+  max-width: 750px;
+  margin: auto;
+}
+
+header {
+  color: #fff;
+  font-weight: 400;
+  margin-top: 140px;
+  margin-bottom: 50px;
+}
+
+header h1 {
+  font-size: 48px;
+  line-height: 60px;
+  margin-bottom: 18px;
+  font-weight: 400;
+}
+
+header p {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+form {
+  background-color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  padding: 64px;
+  border-radius: 20px 20px 0 0;
+}
+
+fieldset {
+  border: none;
+}
+
+form > fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+legend {
+  color: #535971;
+  font-weight: 400;
+  line-height: 34px;
+}
+
+form > fieldset > legend {
+  /* legend 1° nivel */
+  font-size: 24px;
+
+  width: 100%;
+  border-bottom: 1px solid #e6e6f0;
+  padding-bottom: 16px;
+  margin-bottom: 32px;
+}
+
+label {
+  color: #4e4958;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+
+  display: block;
+}
+
+label span {
+  color: #c1bccc;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+
+  margin-left: 9px;
+}
+
+label span:hover {
+  color: #75717e;
+}
+
+form input {
+  width: 100%;
+  background-color: #fafafc;
+
+  border: 1px solid #e6e6f0;
+  border-radius: 8px;
+  height: 56px;
+
+  padding: 0 24px;
+
+  color: #75717e;
+}
+
+.two-collumns {
+  display: flex;
+  gap: 22px;
+}
+
+.two-collumns > div {
+  width: 50%;
+}
+
+.three-collumns {
+  display: flex;
+  gap: 10px;
+}
+
+.three-collumns > div:first-child {
+  flex-basis: 80%;
+  margin-right: 22px;
+}
+
+footer {
+  padding: 50px 64px;
+  background-color: #535971;
+  border-radius: 0 0 20px 20px;
+  margin-bottom: 100px;
+}
+
+footer > button {
+  padding: 14px 0;
+  width: 100%;
+
+  border-radius: 20px;
+  border: none;
+
+  background-color: #ff5374;
+  color: #ffffff;
+
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+@media screen and (max-width: 770px){
+  .header-wrapper{
+    text-align: center;
+    width: 100%;
+    margin: auto;
+  }
+}

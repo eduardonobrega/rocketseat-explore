@@ -37,11 +37,14 @@
           <input type="tel" name="whats" id="whats" />
 
           <label for="extras">Informações extras</label>
-          <textarea name="extras" id="extras" cols="30" rows="10"></textarea>
+          <textarea name="extras" id="extras"></textarea>
 
           <label for="type">Categoria</label>
           <select name="type" id="type">
             <option value="" disabled selected>Tipo do evento</option>
+            <option value="live">Ao vivo</option>
+            <option value="podcast">Podcast</option>
+            <option value="mentorship">Mentoria</option>
           </select>
         </fieldset>
 
@@ -60,21 +63,42 @@
           >
           <input type="password" name="password" id="password" />
 
-          <input type="checkbox" name="privacy-check" id="privacy-check" />
-          <label for="privacy-check" style="display: inline;">Evento privado</label>
+          <div class="checkbox-wrapper">
+            <input
+            type="checkbox"
+            id="privacy-check"
+            
+            />
+            <label for="privacy-check" 
+              >Evento privado</label
+            >
+          </div>
         </fieldset>
 
         <fieldset id="date-section">
           <legend>Dia e hora</legend>
 
-          <label for="date">Data</label>
-          <input type="date" name="date" id="date" />
+          <div class="date-wrapper">
+            <div class="input-wrapper">
+              <label for="date">Data</label>
+              <input type="date" name="date" id="date" />
+            </div>
 
-          <label for="start">Das</label>
-          <input type="datetime" name="start" id="start" placeholder="19:00" />
+            <div class="input-wrapper">
+              <label for="start">Das</label>
+              <input
+                type="datetime"
+                name="start"
+                id="start"
+                placeholder="19:00"
+              />
+            </div>
 
-          <label for="end"></label>
-          <input type="datetime" name="end" id="end" placeholder="20:00" />
+            <div class="input-wrapper">
+              <label for="end">Até</label>
+              <input type="datetime" name="end" id="end" placeholder="20:00" />
+            </div>
+          </div>
         </fieldset>
       </form>
     </main>

@@ -3,7 +3,6 @@
 /*Google Fonts: Archivo and Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Poppins&display=swap');
 
-
 :root {
   --archivo: 'Archivo', sans-serif;
   --poppins: 'Poppins', sans-serif;
@@ -14,16 +13,23 @@
   padding: 0;
   box-sizing: border-box;
   outline: none;
-  
 }
 
-h1, legend {
+h1,
+legend {
   font-family: var(--archivo);
 }
 
-body {
+body,
+input,
+textarea,
+select,
+button {
   font-family: var(--poppins);
-  background-color: #E5E5E5;
+}
+
+body {
+  background-color: #e5e5e5;
   min-height: 100vh;
   padding-top: 77px;
 }
@@ -44,7 +50,8 @@ body::before {
   max-width: 319px;
 }
 
-header, main {
+header,
+main {
   max-width: 736px;
   margin: 0 auto;
 }
@@ -58,14 +65,14 @@ header h1 {
 }
 
 header p {
-  color: #42D3FF;
+  color: #42d3ff;
   font-weight: 400px;
   font-size: 16px;
   line-height: 26px;
 }
 
 main {
-  background-color: #FAFAFC;
+  background-color: #fafafc;
   margin-top: 42px;
   padding: 64px;
   border-radius: 8px 8px 0 0;
@@ -86,8 +93,8 @@ form legend {
   font-size: 24px;
   line-height: 34px;
 
-  color: #32264D;
-  border-bottom: 1px solid #E6E6F0;
+  color: #32264d;
+  border-bottom: 1px solid #e6e6f0;
   width: 100%;
   padding-bottom: 16px;
 }
@@ -95,6 +102,97 @@ form legend {
 form label {
   display: block;
   margin-top: 24px;
+  margin-bottom: 8px;
+  color: #4e4958;
+  font-weight: 400;
+  line-height: 14px;
+  font-size: 14px;
+}
+
+form label > span {
+  color: #c1bccc;
+  font-size: 12px;
+  line-height: 20px;
+  margin-left: 12px;
+}
+
+form label > span:hover {
+  color: #716f76;
+}
+
+form input,
+textarea,
+select {
+  background-color: #fafafc;
+  border: 1px solid #e6e6f0;
+
+  padding: 15px 24px;
+  width: 100%;
+  border-radius: 8px;
+  color: #8f8b97;
+}
+
+form input:focus,
+textarea:focus,
+select:focus {
+  border-color: #ff1010;
+}
+
+form textarea {
+  height: 168px;
+}
+
+form select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 10L12 14L16 10' stroke='%239C98A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  background-position: right 24px center;
+  background-repeat: no-repeat;
+}
+
+input[type='checkbox'] {
+  margin-top: 24px;
+  margin-right: 16px;
+}
+
+.date-wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.input-wrapper:first-child {
+  flex-basis: 30rem;
 }
 
 
+.checkbox-wrapper {
+  margin-top: 24px;
+
+}
+
+.checkbox-wrapper label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0;
+}
+
+#privacy-check {
+  display: none;
+}
+
+.checkbox-wrapper label::before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  display: block;
+
+  border: 1px solid #E6E6F0;
+  border-radius: 8px;
+}
+
+#privacy-check:checked + label::before {
+  background-image: url("data:image/svg+xml,%3Csvg width='18' height='14' viewBox='0 0 18 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 11.17L1.83 7L0.410004 8.41L6 14L18 2L16.59 0.589996L6 11.17Z' fill='%2342D3FF'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: center;
+}

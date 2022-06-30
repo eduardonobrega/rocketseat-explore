@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Avaliação</title>
+  </head>
+  <body>
+    <header>
+      <h1>avalie a sua mentoria</h1>
+      <p>Chegou a hora de avaliar o seu mentor. Bora lá?</p>
+      <img
+        src="assets/img.svg"
+        alt="Balão rosa com 5 estrelas e somente 3 selecionadas"
+      />
+    </header>
+    <main>
+      <form>
+        <fieldset>
+          <legend>Informações pessoais</legend>
+
+          <div class="two-columns">
+            <div class="input-wrapper">
+              <label for="event-name">Nome</label>
+              <input type="text" id="event-name">
+            </div>
+
+            <div class="input-wrapper">
+              <label for="event-lastName">Sobrenome</label>
+              <input type="text" id="event-lastName">
+            </div>
+          </div>
+
+          <div class="input-wrapper">
+            <label for="event-email">Email <span>(digite um email válido)</span></label>
+            <input type="email" id="event-email">
+          </div>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Informações do mentor</legend>
+
+          <div class="input-wrapper">
+            <label for="event-mentor">Selecione quem foi o seu mentor</label>
+            <select id="event-mentor">
+              <option value="">Eduardo</option>
+              <option value="">Davi</option>
+              <option value="">Rafa</option>
+            </select>
+          </div>
+
+          <div class="input-wrapper">
+            <label for="event-feddback">Feedback sobre o mentor</label>
+            <textarea id="feddback"></textarea>
+          </div>
+
+          <div class="checkbox-wrapper">
+            <input type="checkbox" id="event-doubts">
+            <label for="event-doubts">Todas as minhas dúvidas foram esclarecidas durante a mentoria.</label>
+          </div>
+        </fieldset>
+        
+        <fieldset>
+          <legend>Agendando próxima mentoria</legend>
+
+          <div class="three-columns">
+            <div class="input-wrapper">
+              <label for="event-date">Data <span>(DD/MM/AAAA)</span></label>
+              <input type="date" id="event-date">
+            </div>
+
+            <div class="input-wrapper">
+              <label for="event-start">Das</label>
+              <input type="datetime" id="event-start">
+            </div>
+
+            <div class="input-wrapper">
+              <label for="event-end">Até</label>
+              <input type="datetime" id="event-end">
+            </div>
+          </div>
+        </fieldset>
+
+        <input type="submit" value="SALVAR">
+      </form>
+    </main>
+  </body>
+</html>

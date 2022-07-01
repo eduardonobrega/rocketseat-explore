@@ -20,6 +20,11 @@ body {
   padding: 6.0rem 2.3rem;
 }
 
+main {
+  max-width: 33.0rem;
+  margin: auto;
+}
+
 main p:first-child {
   color: #7158EF;
   font-weight: 400;
@@ -60,32 +65,51 @@ a:hover {
 }
 
 ul {
+  color: #090039;
   list-style: none;
+  margin-top: 7.2rem;
+  
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
-
-  margin-top: 7.2rem;
 }
 
 ul li {
-  color: #090039;
   font-weight: 700;
   font-size: 2.4rem;
   line-height: 3.2rem;
-
+  
   display: flex;
   align-items: center;
-  gap: 2.5rem;
+  gap: 3.7rem;
 }
 
 ul li span {
-  color: #090039;
-
   font-weight: 800;
   font-size: 7.2rem;
-  line-height: 8.0re7.2rem;
+  line-height: 8.0rem;
   letter-spacing: -2px;
 
-  width: 4.7rem; /* para os números terem o mesmo tamanho */
+  min-width: 4.6rem; /* para os números terem o mesmo tamanho */
+}
+
+@media (min-width: 700px) {
+  body {
+    padding: 8.0rem;
+  }
+
+  main {
+    display: flex;
+    max-width: 1021px;
+    gap: 10rem;
+    padding: 0;
+  }
+
+  main > div {
+    max-width: 484px;
+  }
+
+  ul li {
+    gap: 5.3rem;
+  }
 }

@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;800&display=swap');
+
+:root {
+  font-size: 62.5%;
+
+  --font: 'Epilogue', sans-serif;
+
+  --hue: 261; /* core que vou usar para tudo */
+  --bg-primary: hsl(var(--hue), 22%, 20%);
+  --fc-primary: hsl(var(--hue), 0%, 100%);
+  --fc-secondary: hsl(var(--hue), 50%, 80%);
+  --fs-heading: 4rem;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: var(--font);
+  background-color: var(--bg-primary);
+  color: var(--fc-primary);
+  padding: 10rem 2.3rem;
+}
+
+.page {
+  max-width: 33rem;
+  margin: auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 8rem;
+}
+
+header p {
+  color: var(--fc-secondary);
+  font-weight: 400;
+  line-height: 3.2rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+header h1 {
+  font-weight: 800;
+  font-size: var(--fs-heading);
+  line-height: 4.8rem;
+
+  margin-top: 1.7rem;
+}
+
+main {
+  display: grid;
+  gap: 3.2rem;
+}
+
+.card {
+  position: relative;
+}
+
+.card img {
+  width: 100%;
+  object-fit: cover; 
+  /* 
+    vai considerar a tag img como uma caixa 
+    e o src (a imagem em si) como um objeto
+    fit = encaixar 
+    "encaixe o objeto"
+
+   */
+  height: 41.6rem;
+  border-radius: 6px;
+}
+
+.card h2 {
+  position: absolute;
+  bottom: 5.2rem;
+  left: 2.8rem;
+
+  font-weight: 800;
+  font-size: var(--fs-heading);
+  line-height: 4.8rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2.3rem;
+
+
+}
+
+.card h2 span {
+  color: var(--bg-primary);
+  background-color: var(--fc-primary);
+  
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 3.2rem;
+  
+  display: inline-flex;
+  align-items: center;
+  
+  width: fit-content; /* largura do conteudo*/
+  height: 3.8rem;
+  padding: 0 1.6rem;
+  border-radius: 1.9rem;
+}

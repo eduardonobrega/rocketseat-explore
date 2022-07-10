@@ -18,7 +18,6 @@ body {
 }
 
 .page {
-  max-width: 384px;
   margin: auto;
   text-align: center;
 }
@@ -51,27 +50,39 @@ header h1 {
   animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
 }
 
+header p {
+  display: none;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  color: #fff;
+  font-family: var(--ff-palanquin);
+  margin: 3.2rem auto 0 auto;
+  text-align: start;
+}
+
 main {
   padding: 1.4rem 3.2rem 6rem 3.2rem;
   background-color: #eff1ff;
 }
 
 main p {
+  color: #23053a;
+  padding-bottom: 6.3rem;
+
   font-family: var(--ff-palanquin);
   font-size: 1.41rem;
   line-height: 1.8rem;
   font-weight: 400;
-  color: #23053a;
-
-  padding-bottom: 6.3rem;
 }
 
 .container {
   display: grid;
+
   gap: 3.6rem;
 
-  -webkit-animation: slide-in-bottom 700ms cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-  animation: slide-in-bottom 700ms cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  -webkit-animation: slide-in-bottom 700ms cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  animation: slide-in-bottom 700ms cubic-bezier(0.215, 0.61, 0.355, 1) both;
 }
 
 .container .card {
@@ -92,10 +103,11 @@ main p {
   letter-spacing: 0.05em;
   text-transform: uppercase;
 
-  padding: 1px 2.4rem 0 2.4rem;
+  padding: 0.4rem 1.5rem;
   border-radius: 2rem;
 
-  -webkit-animation: slide-in-top 700ms cubic-bezier(0.215, 0.61, 0.355, 1) 400ms both;
+  -webkit-animation: slide-in-top 700ms cubic-bezier(0.215, 0.61, 0.355, 1)
+    400ms both;
   animation: slide-in-top 700ms cubic-bezier(0.215, 0.61, 0.355, 1) 400ms both;
 }
 
@@ -114,6 +126,7 @@ main p {
 .container .card img:hover {
   transform: scale(1.05);
   filter: brightness(1.08);
+  cursor: pointer;
 }
 
 .container .card:nth-child(odd) img {
@@ -124,6 +137,14 @@ main p {
   height: 45rem;
 }
 
+main footer  {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+
+  font-family: var(--ff-palanquin);
+  text-transform: uppercase;
+  font-weight: bold;
+}
 
 /* Animation logo */
 @-webkit-keyframes rotate-center {
@@ -178,24 +199,24 @@ main p {
 @-webkit-keyframes slide-in-top {
   0% {
     -webkit-transform: translateY(-1000px);
-            transform: translateY(-1000px);
+    transform: translateY(-1000px);
     opacity: 0;
   }
   100% {
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
 @keyframes slide-in-top {
   0% {
     -webkit-transform: translateY(-35px);
-            transform: translateY(-35px);
+    transform: translateY(-35px);
     opacity: 0;
   }
   100% {
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
@@ -204,24 +225,106 @@ main p {
 @-webkit-keyframes slide-in-bottom {
   0% {
     -webkit-transform: translateY(1000px);
-            transform: translateY(1000px);
+    transform: translateY(1000px);
     opacity: 0;
   }
   100% {
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
 @keyframes slide-in-bottom {
   0% {
     -webkit-transform: translateY(1000px);
-            transform: translateY(1000px);
+    transform: translateY(1000px);
     opacity: 0;
   }
   100% {
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
     opacity: 1;
+  }
+}
+
+@media (min-width: 40em) {
+  .page {
+    display: flex;
+    background-color: red;
+  }
+
+  header {
+
+    width: 35%;
+    max-width: 377px;
+  }
+
+  header p {
+    display: block;
+    padding: 1.5rem;
+  }
+
+  main {
+    padding: 5rem 3rem 0 5rem;
+    width: 85%;
+  }
+
+  .container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, 25rem);
+    grid-template-areas: 'A B'
+                         'D B'
+                         'D C'
+                         'F E'
+                         'F .';
+                      
+
+  }
+
+  .container .card:nth-child(even) img {
+    height: 100%;
+  }
+
+  .container .card:nth-child(1) {
+    grid-area: A;
+  }
+
+  .container .card:nth-child(2) {
+    grid-area: B;
+  }
+
+  .container .card:nth-child(3) {
+    grid-area: C;
+  }
+
+  .container .card:nth-child(4) {
+    grid-area: D;
+  }
+
+  .container .card:nth-child(5) {
+    grid-area: E;
+  }
+  .container .card:nth-child(6) {
+    grid-area: F;
+  }
+
+
+  .container .card h2{
+    font-size: clamp(1.4rem, 0.6rem + 1vw, 2rem);
+  }
+  main p {
+    display: none;
+  }
+}
+
+@media (min-width:1000px) {
+  .container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 'A B C'
+                         'D B F'
+                         'D E F';
+                      
+
   }
 }

@@ -59,3 +59,47 @@ main p {
 
   padding-bottom: 6.3rem;
 }
+
+.container {
+  display: grid;
+  gap: 3.6rem;
+}
+
+.container .card {
+  position: relative;
+}
+
+.container .card h2 {
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+
+  background-color: #FEEAFA;
+  color: #4A4E69;
+
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 3.4rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  padding: 1px 2.4rem 0 2.4rem;
+  border-radius: 2rem;
+}
+
+.container .card img {
+  width: 100%;
+  border-radius: 2rem;
+  object-fit: cover;
+}
+
+
+.container .card:nth-child(odd) img  {
+  height: 25rem;
+
+}
+
+.container .card:nth-child(even) img {
+  height: 45rem;
+
+}

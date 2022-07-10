@@ -4,7 +4,6 @@
   font-size: 62.5%;
   --ff-palanquin: 'Palanquin', sans-serif;
   --ff-staatliches: 'Staatliches', cursive;
-
 }
 
 * {
@@ -25,7 +24,7 @@ body {
 }
 
 header {
-  background-color: #8E9AAF;
+  background-color: #8e9aaf;
   padding-bottom: 3rem;
 }
 
@@ -35,7 +34,7 @@ header img {
 
 header h1 {
   color: #fff;
-  background-color: #CBC0D3;
+  background-color: #cbc0d3;
   padding: 0.7rem 0;
 
   font-size: 40px;
@@ -48,6 +47,7 @@ header h1 {
 
 main {
   padding: 1.4rem 3.2rem 6rem 3.2rem;
+  background-color: #eff1ff;
 }
 
 main p {
@@ -55,7 +55,7 @@ main p {
   font-size: 1.41rem;
   line-height: 1.8rem;
   font-weight: 400;
-  color: #23053A;  
+  color: #23053a;
 
   padding-bottom: 6.3rem;
 }
@@ -74,8 +74,8 @@ main p {
   top: 1.6rem;
   right: 1.6rem;
 
-  background-color: #FEEAFA;
-  color: #4A4E69;
+  background-color: #feeafa;
+  color: #4a4e69;
 
   font-weight: 400;
   font-size: 2rem;
@@ -91,15 +91,26 @@ main p {
   width: 100%;
   border-radius: 2rem;
   object-fit: cover;
+
+  transition: all 200ms;
+  box-shadow: 0px 0px 1.9px rgba(0, 0, 0, 0.039),
+    0px 0px 4.6px rgba(0, 0, 0, 0.057), 0px 0px 8.6px rgba(0, 0, 0, 0.07),
+    0px 0px 15.4px rgba(0, 0, 0, 0.083), 0px 0px 28.8px rgba(0, 0, 0, 0.101),
+    0px 0px 69px rgba(0, 0, 0, 0.14);
 }
 
+.container .card img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.08);
+}
 
-.container .card:nth-child(odd) img  {
+.container .card:nth-child(odd) img {
   height: 25rem;
-
 }
 
 .container .card:nth-child(even) img {
   height: 45rem;
+}
 
+@keyframes identifier {
 }

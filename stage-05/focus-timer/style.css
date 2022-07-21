@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+:root {
+  font-size: 62.5%;
+
+  --txt-color: #fff;
+  --bg-color: #121214;
+
+  --hue: 194;
+  --bg-sencondary: hsla(var(--hue), 100%, 63%, 0.13);
+  --primary-color: hsl(var(--hue), 100%, 63%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 1.6rem;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--txt-color);
+
+  display: grid;
+}
+
+main {
+  width: fit-content;
+  align-self: end;
+  justify-self: center;
+}
+
+#timer {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: clamp(6rem, 5.0667rem + 2.9167vw, 8.8rem);
+  line-height: 10.3rem;
+  text-align: center;
+  text-transform: uppercase;
+
+  margin-bottom: 1.6rem;
+
+  display: flex;
+  justify-content: center;
+}
+
+#controls {
+  background-color: var(--bg-sencondary);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3.2rem;
+  
+  
+  border-radius: 999.9rem;
+
+  width: clamp(16rem, 13.7333rem + 7.0833vw, 22.8rem);
+  height: clamp(6.4rem, 4.9333rem + 4.5833vw, 10.8rem);
+}
+
+footer {
+  align-self: end;
+  justify-self: end;
+  margin-right: 3rem;
+  margin-bottom: 2rem;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+button svg {
+  width: clamp(4.4rem, 3.7333rem + 2.0833vw, 6.4rem);;
+}
+
+svg path {
+  fill: var(--primary-color);
+}
+
+.hide {
+  display: none;
+}

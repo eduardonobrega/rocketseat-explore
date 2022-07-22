@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Montserrat:wght@600&display=swap');
+
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #7879f1;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0;
+  transition: background-color .3s;
+}
+
+button:hover {
+  background-color: #6161c2;
+}
+
+body {
+  font-size: 1.6rem;
+  background: linear-gradient(287.56deg, #c2e9fb, #a1c4fd 100%);
+  min-height: 100vh;
+
+  display: grid;
+  place-items: center;
+  animation: changeColor 700ms infinite alternate;
+  animation-play-state: paused;
+}
+
+body,
+button,
+input {
+  font-family: 'DM Sans', sans-serif;
+}
+
+main {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  border-radius: 0.6rem;
+  padding: 4.8rem 6.4rem 6.4rem;
+  width: min(90%, 42.8rem);
+  margin-top: -12rem;
+
+  text-align: center;
+
+}
+
+.hide {
+  display: none;
+}
+
+
+/* screen1 */
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.4rem;
+  margin-bottom: 1.6rem;
+  
+}
+
+h1,
+p {
+  color: #34355b;
+}
+
+p {
+  opacity: .8;
+}
+
+form {
+  margin-top: 4.8rem;
+  display: flex;
+  justify-content: center;
+}
+
+input, button {
+  border: none;
+  padding: 1.6rem;
+}
+
+input {
+  background-color: #DCE2E9;
+  width: 6rem;
+  border-radius: 4px 0 0 4px;
+}
+
+
+/* screen2 */
+
+#screen2 button {
+  border-radius: 4px;
+}
+
+h2 {
+  font-size: 2.4rem;
+  font-weight: normal;
+  margin-bottom: 3.3rem;
+}
+
+
+@keyframes changeColor {
+  to {
+    background: #ca2f2f;
+  }from {
+    background: linear-gradient(287.56deg, #c2e9fb, #a1c4fd 100%);
+  }
+}
+
+
